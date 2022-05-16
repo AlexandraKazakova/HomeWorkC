@@ -7,3 +7,7 @@ for(int x = 1; x <= n; x++)
 {
 	Console.WriteLine("{0,5}|\t{1}", x, Math.Pow(x, 3));
 }
+if(n < 1)
+{
+	Console.WriteLine($"{n} - некорректное число");
+}
