@@ -14,7 +14,8 @@ Console.WriteLine("Введите координату b2 -> ");
 float b2 = Convert.ToSingle(Console.ReadLine());
 float x = ((b1 - b2) * -1) / (k1 - k2);
 float y = k2 * x + b2;
-if(b1 - b2 == 0) Console.WriteLine("Прямые либо совпадают, либо параллельны");
+if(b1 - b2 == 0) Console.WriteLine("Прямые либо совпадают");
+else if(k1 == k2) Console.WriteLine("Прямые параллельны - точек пересечения нет");
 else if (b1 -b2 != 0) Console.WriteLine($"Координаты пересечения прямых - [{Math.Round(x,3)},{Math.Round(y,3)}]");
 
 // Составим систему из уравнений этих прямых
