@@ -36,7 +36,7 @@ void FindEvenNumber(int[] numbers)
 	{
 		if(numbers[pos] % 2 == 0) count += 1;
 	}
-	Console.WriteLine(count);
+	Console.WriteLine($"Количество чётных чисел в массиве = {count}");
 }
 
 FillArray(array);
