@@ -8,7 +8,7 @@
 
 double[,] GetArray(int a, int b)
 {
-	double[,] array = new double[a,b];
+	double[,] array = new double[a, b];
 	Random rndNum = new Random();
 	int maxValue = 10;
 	int minValue = -10;
@@ -16,7 +16,7 @@ double[,] GetArray(int a, int b)
 	{
 		for (int j = 0; j < array.GetLength(1); j++)
 		{
-			array[i,j] = rndNum.NextDouble() * (maxValue - minValue) + minValue;
+			array[i, j] = rndNum.NextDouble() * (maxValue - minValue) + minValue;
 		}
 	}
 	return array;
@@ -26,12 +26,12 @@ void PrintArray(double[,] array)
 {
 	for (int i = 0; i < array.GetLength(0); i++)
 	{
-		for(int j = 0; j < array.GetLength(1); j++)
+		for (int j = 0; j < array.GetLength(1); j++)
 		{
-			Console.Write($"{Math.Round(array[i,j], 1)} ");
+			Console.Write($"{Math.Round(array[i, j], 1)} ");
 		}
 		Console.WriteLine();
 	}
 }
-double[,] arr = GetArray(3,4);
+double[,] arr = GetArray(3, 4);
 PrintArray(arr);
