@@ -12,7 +12,7 @@ Console.WriteLine("Введите позицию элемента двумерн
 int rowNumber = int.Parse(Console.ReadLine());
 int columnNumber = int.Parse(Console.ReadLine());
 
-int[,] array = new int[5,5];
+int[,] array = new int[5, 5];
 
 void FillArray(int[,] arr)
 {
@@ -20,23 +20,23 @@ void FillArray(int[,] arr)
 	{
 		for (int j = 0; j < arr.GetLength(1); j++)
 		{
-			array[i,j] = new Random().Next(-10,10);
+			array[i, j] = new Random().Next(-10, 10);
 		}
 	}
 }
 
 void FindNumber(int[,] fillArr, int a, int b)
 {
-	if(a <= fillArr.GetLength(0)
+	if (a <= fillArr.GetLength(0)
 	&& b <= fillArr.GetLength(1))
 	{
-		Console.WriteLine($"{fillArr[a,b]}");
+		Console.WriteLine($"{fillArr[a, b]}");
 	}
-	else 
+	else
 	{
 		Console.WriteLine($"{rowNumber},{columnNumber} -> такого такого элемента в массиве нет");
 	}
 }
 
 FillArray(array);
-FindNumber(array,rowNumber,columnNumber);
+FindNumber(array, rowNumber, columnNumber);
