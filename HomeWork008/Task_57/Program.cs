@@ -73,21 +73,24 @@ void Periodicity(int[,] arr)
 	}
 }
 
-int[,] TwinArray(int[,] arr)
-{
-	int[,] twin = new int [arr.GetLength(0),arr.GetLength(1)];
-	for (int i = 0; i < twin.GetLength(0); i++)
-	{
-		for (int j = 0; j < twin.GetLength(1); j++)
-		{
-			twin[i,j] = arr[i,j];
-		}
-	}
-	return twin;
-}
+// int[,] TwinArray(int[,] arr)
+// {
+// 	int[,] twin = new int[arr.GetLength(0), arr.GetLength(1)];
+// 	for (int i = 0; i < twin.GetLength(0); i++)
+// 	{
+// 		for (int j = 0; j < twin.GetLength(1); j++)
+// 		{
+// 			twin[i, j] = arr[i, j];
+// 		}
+// 	}
+// 	return twin;
+// }
 
 
-	int[,] array = GetArray(3, 3);
-	int[,] twinArray = TwinArray(array);
-	PrintArray(array);
-	Periodicity(twinArray);
+int[,] array = GetArray(3, 3);
+// int[,] twinArray = TwinArray(array);
+PrintArray(array);
+// Periodicity(twinArray);
+int[,] arrayClone = (int[,])array.Clone();
+Periodicity(arrayClone);
+
