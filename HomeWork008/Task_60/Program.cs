@@ -46,9 +46,11 @@ void PrintArray(int[,,] arr)
 		{
 			for (int k = 0; k < arr.GetLength(2); k++)
 			{
-				Console.WriteLine($"{arr[i, j, k]} - {i},{j},{k} ");
+				Console.Write($"{arr[i, j, k]} [{i},{j},{k}] ");
 			}
+			Console.WriteLine();
 		}
+		Console.WriteLine();
 	}
 	if (arr.GetLength(0) == 0
 	|| arr.GetLength(1) == 0
@@ -60,6 +62,6 @@ void PrintArray(int[,,] arr)
 	}
 }
 
-int[,,] array = GetArray(2, 2, 2);
+int[,,] array = GetArray(3, 3, 3);
 PrintArray(array);
 
